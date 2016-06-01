@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22">
+	<defs>
+		<filter id="filter" y="0" width="150%" height="150%">
+			<feOffset dx="0" dy="1"/><!-- Offset filter graphic -->
+			<feGaussianBlur stdDeviation="0.5" result="blur"/><!-- Blur graphic -->
+			<feComposite operator="out" in="SourceGraphic" in2="blur" result="inverse-blur"/><!-- Inverse blur for shadow -->
+			<feFlood flood-color="#FFFFFF" flood-opacity="0.5" result="glow-colour"/><!-- Glow colour and opacity -->
+			<feFlood flood-color="#000000" flood-opacity="0.4" result="shadow-colour"/><!-- Shadow colour and opacity -->
+			<feComposite operator="in" in="glow-colour" in2="blur" result="glow"/><!-- Clip glow colour to blur -->
+			<feComposite operator="in" in="shadow-colour" in2="inverse-blur" result="shadow"/><!-- Clip shadow colour to inverse blur -->
+			<feMerge><!-- Merge results with graphic -->
+				<feMergeNode in="glow"/>
+				<feMergeNode in="SourceGraphic"/>
+				<feMergeNode in="shadow"/>
+			</feMerge>
+		</filter>
+		<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0.5" style="stop-color:#5E5E5E"/>
+			<stop offset="0.75" style="stop-color:#6E6E6E"/>
+		</linearGradient>
+	</defs>
+	<path fill="url(#gradient)" d="M4,5.5C4,6.329,4.671,7,5.5,7h10C16.329,7,17,6.329,17,5.5S16.329,4,15.5,4h-10
+		C4.671,4,4,4.671,4,5.5C4,5.5,4,4.671,4,5.5z" filter="url(#filter)"/>
+	<path fill="url(#gradient)" d="M4,10.5C4,11.329,4.671,12,5.5,12h10c0.829,0,1.5-0.671,1.5-1.5S16.329,9,15.5,9h-10 C4.671,9,4,9.671,4,10.5C4,10.5,4,9.671,4,10.5z" filter="url(#filter)"/>
+	<path fill="url(#gradient)" d="M4,15.5C4,16.329,4.671,17,5.5,17h10c0.829,0,1.5-0.671,1.5-1.5S16.329,14,15.5,14h-10 C4.671,14,4,14.671,4,15.5C4,15.5,4,14.671,4,15.5z" filter="url(#filter)"/>
+</svg>
