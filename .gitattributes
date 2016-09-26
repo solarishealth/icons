@@ -1,0 +1,4 @@
+*.md text=auto whitespace=blank-at-eol,space-before-tab,tabwidth=4
+*.txt text=auto whitespace=blank-at-eol,space-before-tab,tabwidth=4
+*.svg text=auto whitespace=blank-at-eol,space-before-tab,tabwidth=4
+*.ai -text diff
