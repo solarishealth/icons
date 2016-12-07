@@ -1,5 +1,5 @@
 # Icons
-Icon library following similar guidelines to Google's Material Design Icons.
+Icon library following similar guidelines to [Google's Material Design Icons](https://github.com/google/material-design-icons/).
 
 ## License
 
